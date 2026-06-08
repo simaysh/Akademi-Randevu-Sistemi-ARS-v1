@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.ankara.bote.randevu.ui.calendar.CalendarFragment"
+        android:label="Takvim"/>
+    <fragment
+        android:id="@+id/academiciansFragment"
+        android:name="com.ankara.bote.randevu.ui.academicians.AcademiciansFragment"
+        android:label="Akademisyenler"/>
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.ankara.bote.randevu.ui.appointments.AppointmentsFragment"
+        android:label="Randevularım"/>
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.ankara.bote.randevu.ui.groups.GroupsFragment"
+        android:label="Gruplarım">
+        <action
+            android:id="@+id/action_groupsFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.ankara.bote.randevu.ui.groups.CreateGroupFragment"
+        android:label="Grup Oluştur"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ankara.bote.randevu.ui.profile.ProfileFragment"
+        android:label="Profilim"/>
+    <fragment
+        android:id="@+id/qrScannerFragment"
+        android:name="com.ankara.bote.randevu.ui.qr.QrScannerFragment"
+        android:label="QR Okut"/>
+    <fragment
+        android:id="@+id/academicianDashboardFragment"
+        android:name="com.ankara.bote.randevu.ui.academician.AcademicianDashboardFragment"
+        android:label="Yönetim Paneli"/>
+    <fragment
+        android:id="@+id/pastAppointmentsFragment"
+        android:name="com.ankara.bote.randevu.ui.appointments.PastAppointmentsFragment"
+        android:label="Geçmiş Randevular"/>
+
+</navigation>
